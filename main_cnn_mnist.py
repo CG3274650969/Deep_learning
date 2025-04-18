@@ -13,8 +13,6 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 # 创建结果保存目录
 os.makedirs("result", exist_ok=True)
 
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
 # 数据加载
 train_dataset = datasets.MNIST(root='./data', train=True, download=True, transform=mnist_transform)
 test_dataset = datasets.MNIST(root='./data', train=False, download=True, transform=mnist_transform)
